@@ -9,8 +9,8 @@ The domain object (Person), consists of only parts of the entire Person object r
 
 Helpful Links
 ============
-You need a 
-The Freebase API documentation can be found here: https://developers.google.com/freebase/
+* You will need a valid Google Developer API key. Get one here: https://developers.google.com/apis-explorer/ 
+* The Freebase API documentation can be found here: https://developers.google.com/freebase/
 
 
 ```php
