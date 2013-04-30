@@ -39,6 +39,9 @@ class Query
 
     function callFreeBase($param)
     {
+        /*****
+         * Initial Search for input name
+         */
         $params = array(
             'filter' => '(all name:"' . $param . '" type:"/people/person")',
             //'filter' => '(all name:"Ronald Reagan" type:"/people/person")',
@@ -61,6 +64,9 @@ class Query
 
         $response = json_decode($results, true);
 
+        /*****
+         * If name found, make subsequent call for information on the FIRST person found.
+         */
         $id = $response['result'][0]['id'];
 
         $params = array('key' => $this->apikey);
@@ -86,6 +92,9 @@ class Query
             echo "\nNothing to log...\n\n";
             return;
         }
+        /*****
+         * Build associative array
+         */
         $fbname = $response['property']['/type/object/name']['values'][0]['value'];
         $summary = $response['property']['/common/topic/description']['values'][0]['value'];
         // /people/person/date_of_birth
@@ -156,6 +165,8 @@ class Query
     }
 
     /**
+     * from: http://www.daveperrett.com/articles/2008/03/11/format-json-with-php/
+     *
      * Indents a flat JSON string to make it more human-readable.
      *
      * @param string $json The original JSON string to process.

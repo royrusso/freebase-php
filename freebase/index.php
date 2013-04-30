@@ -106,7 +106,9 @@ Latest Builds: https://github.com/royrusso
     <form id="theform" action="query.php" method="POST">
         <fieldset>
             <legend>FreeBase PHP - People Finder</legend>
-            <p>Enter a person's name, and this script will query the FreeBase API for information on that person.</p>
+            <p>Enter a person's name, and this script will query the FreeBase API for information on that person.<br/>Documentation
+                and code can be found on the <a href="https://github.com/royrusso/freebase-php" target="_blank">Project
+                    Page</a></p>
             <label>Enter a Name</label>
             <input type="text" id="personField" placeholder="Type a name" name="q">
             <span class="help-block">ie. Albert Einstein, Ronald Reagan</span>

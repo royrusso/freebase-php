@@ -4,6 +4,8 @@ freebase-php
 Sample PHP script that shows how to query the FreeBase API for Person data. Additionally, it traverses the FreeBase API Result extracting important details.
 This script also allows you to see the entire JSON result.
 
+* Live Demo: http://royrusso.com/freebase-php/
+
 Requirements
 ------------
 * Apache WS or IIS
