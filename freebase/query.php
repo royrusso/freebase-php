@@ -154,11 +154,11 @@ class Query
         $out .= '<div class="tab-pane" id="search"><textarea class="field span12" rows="20">Person Search Results:' . "\n\n" . $this->indent($searchResults) . '</textarea></div>';
         $out .= '</div>';
         $out .= '<script>';
-
         $out .= '$("#resultsTab").on("click", "a", function(e){';
         $out .= 'e.preventDefault();';
         $out .= "$(this).tab('show')";
         $out .= '});';
+        $out .= '</script>';
         echo $out;
         return;
 
