@@ -1,8 +1,8 @@
 freebase-php
 ============
 
-Sample PHP script that reads Person data via the FreeBase.com API and builds a local Person object, using a name
-keyed in to the input form. This script only extracts some of the data to build its domain object, but also allows you to see the entire JSON result from FreeBase.com.
+Sample PHP script that shows how to query the FreeBase API for Person data. Additionally, it traverses the FreeBase API Result extracting important details.
+This script also allows you to see the entire JSON result.
 
 Requirements
 ------------
