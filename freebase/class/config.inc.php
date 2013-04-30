@@ -26,7 +26,7 @@ class Config
     {
         $this->cfg = array
         (
-            'FREEBASE_API_KEY' => 'ENTER_YOUR_KEY_HERE',
+            'FREEBASE_API_KEY' => '',
             'FREEBASE_SERVICE_URL' => 'https://www.googleapis.com/freebase/v1/search'
         );
     }

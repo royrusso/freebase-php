@@ -62,6 +62,7 @@ class Query
         }
         curl_close($ch);
 
+        $searchResults = $results;
         $response = json_decode($results, true);
 
         /*****
@@ -69,7 +70,7 @@ class Query
          */
         $id = $response['result'][0]['id'];
 
-        $params = array('key' => $this->apikey);
+        $params = array('key' => $this->cfg->param('FREEBASE_API_KEY'));
         $service_url = 'https://www.googleapis.com/freebase/v1/topic';
         $url = $service_url . $id . '?' . http_build_query($params);
         $ch = curl_init();
@@ -83,7 +84,6 @@ class Query
             return array();
         }
         curl_close($ch);
-        $searchResults = $results;
         $response = json_decode($results, true);
 
         // /common/topic/description
